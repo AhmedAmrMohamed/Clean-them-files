@@ -39,9 +39,11 @@ class Engine:
 
     def copier(s):
         s.setupdst()
+        le = len(s.done)
         cp = shutil.copy
-        for sng in s.done:
+        for num,sng in enumerate(s.done):
             print(f'cp {sng}')
+            print(f'{num}/{le}',end = '\r')
             cp(s.src+'/'+sng,s.dst+'/'+sng)
             
 
