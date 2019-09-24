@@ -4,7 +4,7 @@ import shutil
 import math
 
 class Engine:
-    def __init__(s,src,*,dst=None,degree = 0.7):
+    def __init__(s,src=None,dst=None,degree = 0.7):
         s.distance = Docdis()
         s.src = src
         s.dst = dst
