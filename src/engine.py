@@ -1,13 +1,13 @@
-from docdis import Docdis
+from . import docdis 
 import os
 import shutil
 import math
-
+Docdis = docdis.Docdis
 class Engine:
     def __init__(s,src=None,dst=None,degree = 0.7):
         s.distance = Docdis()
-        s.src = src
-        s.dst = dst
+        s.src = src if src else os.getcwd()
+        s.dst = dst if dst else os.getcwd()+'/dest'
         s.deg = max(min(math.pi/2,degree),0)
         print('start core')
         s.done  = s.core()

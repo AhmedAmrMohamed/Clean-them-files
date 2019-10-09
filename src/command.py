@@ -1,5 +1,5 @@
 def main():
-    import engine
+    from . import engine
     import argparse
     import os
     '''start of help msgs'''
@@ -14,3 +14,4 @@ def main():
     parser.add_argument('-g','--degree',default = 0.7)
     args = parser.parse_args()
     engine.Engine(args.source,args.destination,args.degree)
+# main()
